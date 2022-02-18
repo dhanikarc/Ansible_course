@@ -1,10 +1,10 @@
 ---
 # tasks file for rabi
 - name: Install git
-  yum: name=git state=latest
+  apt: name=git state=latest
 - name: Install docker
-  yum: name=docker state=latest
+  apt: name=docker.io state=latest
 - name: Install httpd
-  yum: name=httpd state=latest
+  apt: name=apache2 state=latest
 - include_tasks: copy.yml
 - include_tasks: create.yml
